@@ -24,7 +24,9 @@ public static class GameEnpoints
 
   public static RouteGroupBuilder MapGameEndpoints(this WebApplication app)
   {
-    var group = app.MapGroup("games");
+    var group = app.MapGroup("games")
+                  .WithParameterValidation();
+
 
     //GET /games
     group.MapGet("/", () => games);
@@ -51,8 +53,7 @@ public static class GameEnpoints
       games.Add(game);
 
       return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
-    })
-    .WithParameterValidation();
+    });
 
     //Update /games/1
     group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
