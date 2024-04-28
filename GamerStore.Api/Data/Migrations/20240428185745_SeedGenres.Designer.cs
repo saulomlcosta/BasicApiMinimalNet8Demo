@@ -3,6 +3,7 @@ using System;
 using GamerStore.Data.Api;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GamerStore.Api.Data.Migrations
 {
     [DbContext(typeof(GamerStoreContext))]
-    partial class GamerStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20240428185745_SeedGenres")]
+    partial class SeedGenres
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.4");
