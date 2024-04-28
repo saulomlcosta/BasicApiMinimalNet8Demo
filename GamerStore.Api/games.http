@@ -1,31 +1,32 @@
 GET http://localhost:5166/games
 
 ###
-GET http://localhost:5166/games/1
+GET http://localhost:5166/games/4
 
 ###
 POST http://localhost:5166/games
 Content-Type: application/json
 
 {
-  "genre": "Kids and Family",
+  "name": "TeKa",
+  "genreId": "1",
   "price": 19.99,
   "releaseDate": "2011-11-18"
 }
 
 ###
-PUT http://localhost:5166/games/1
+PUT http://localhost:5166/games/4
 Content-Type: application/json
 
 {
-  "name": "Minecraft",
-  "genre": "Kids and Family",
+  "name": "Dinasty Warriors",
+  "genreId": "3",
   "price": 19.99,
   "releaseDate": "2011-11-18"
 }
 
 ###
-DELETE http://localhost:5166/games/2
+DELETE http://localhost:5166/games/5
 
 
 
