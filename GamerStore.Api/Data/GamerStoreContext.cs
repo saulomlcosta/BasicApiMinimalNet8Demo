@@ -1,5 +1,4 @@
-﻿using GamerStore.Api;
-using GamerStore.Entities.Api;
+﻿using GamerStore.Entities.Api;
 using Microsoft.EntityFrameworkCore;
 
 namespace GamerStore.Data.Api;
